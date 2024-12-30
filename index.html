@@ -4,41 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRIBAL's PORTFOLIO</title>
-
-    <!-- Inline CSS -->
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1a1a1a; /* Dark background color */
-            color: #ffffff; /* Light text color */
-            background-image: url('https://example.com/hacker-background.jpg'); /* Replace with your hacker image URL */
-            background-size: cover; /* Cover the entire background */
-            background-position: center; /* Center the background image */
+            background-color: #1a1a1a;
+            color: #ffffff;
+            background-image: url('https://example.com/hacker-background.jpg');
+            background-size: cover;
+            background-position: center;
         }
         header {
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent header */
+            background: rgba(0, 0, 0, 0.7);
             color: #ffffff;
             padding: 20px 0;
             position: relative;
             overflow: hidden;
         }
         header h1 {
-            margin: 20px 0 0; /* Margin to create space below the buttons */
+            margin: 20px 0 0;
             font-size: 2.5em;
-            color: lightblue; /* Light blue color for the heading */
+            color: lightblue;
             animation: fadeIn 1s ease-in;
-            text-align: center; /* Center the header text */
+            text-align: center;
         }
         header p {
-            margin: 10px 0; /* Margin to create space below the heading */
+            margin: 10px 0;
             animation: fadeIn 1.5s ease-in;
-            text-align: center; /* Center the paragraph text */
+            text-align: center;
         }
         .hamburger {
             background: #ffffff;
-            color: green; /* Green text for hamburger button */
+            color: green;
             border: none;
             padding: 10px;
             cursor: pointer;
@@ -54,31 +52,31 @@
             color: #ffffff;
         }
         .profile-button {
-            background: #35424a; /* Profile button background */
-            color: green; /* Green text for profile button */
+            background: #35424a;
+            color: green;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
             border-radius: 5px;
             font-size: 1.2em;
-            position: absolute; /* Positioning for top right */
-            top: 20px; /* Align to the top */
-            right: 20px; /* Align to the right */
+            position: absolute;
+            top: 20px;
+            right: 20px;
             transition: background 0.3s;
         }
         .profile-button:hover {
-            background: #ffffff; /* Change background on hover */
-            color: green; /* Keep text color green on hover */
+            background: #ffffff;
+            color: green;
         }
         .submenu {
-            display: none; /* Initially hide the submenu */
+            display: none;
             position: absolute;
-            top: 60px; /* Position below the profile button */
-            right: 0; /* Align to the right */
-            background: rgba(255, 255, 255, 0.9); /* Semi-transparent submenu */
+            top: 60px;
+            right: 0;
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            z-index: 1000; /* Ensure it appears above other content */
+            z-index: 1000;
         }
         .submenu button {
             display: block;
@@ -97,14 +95,14 @@
             color: #ffffff;
         }
         .menu {
-            display: none; /* Initially hide the menu */
+            display: none;
             position: absolute;
-            top: 60px; /* Position below the header */
+            top: 60px;
             left: 20px;
-            background: rgba(255, 255, 255, 0.9); /* Semi-transparent menu */
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            z-index: 1000; /* Ensure it appears above other content */
+            z-index: 1000;
         }
         .menu button {
             display: block;
@@ -123,16 +121,16 @@
             color: #ffffff;
         }
         .expandable-section {
-            display: none; /* Initially hide the expandable section */
+            display: none;
             padding: 20px;
             margin: 10px;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent section background */
+            background: rgba(0, 0, 0, 0.7);
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center; /* Center the text in sections */
+            text-align: center;
         }
         h2 {
-            color: #ffffff; /* Light color for headings */
+            color: #ffffff;
         }
         .skills ul, .projects ul, .education ul {
             list-style-type: none;
@@ -141,7 +139,7 @@
         .skills li, .projects li, .education li {
             margin: 10px 0;
             padding: 10px;
-            background: rgba(255, 255, 255, 0.1); /* Light background for list items */
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
             transition: transform 0.3s;
         }
@@ -151,7 +149,7 @@
         footer {
             text-align: center;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent footer */
+            background: rgba(0, 0, 0, 0.7);
             color: #ffffff;
         }
         .social-icons {
@@ -159,41 +157,36 @@
             margin: 20px 0;
         }
         .social-icons a {
-            margin: 0 15px; /* Increased margin for better spacing */
+            margin: 0 15px;
             text-decoration: none;
-            color: #ffffff; /* Light color for icons */
-            font-size: 2em; /* Icon size */
+            color: #ffffff;
+            font-size: 2em;
             transition: color 0.3s;
         }
         .social-icons a:hover {
-            color: #35424a; /* Change color on hover */
+            color: #35424a;
         }
         .profile-button img {
-            width: 30px; /* Set width for the circular image */
-            height: 30px; /* Set height for the circular image */
-            border-radius: 50%; /* Make the image circular */
-            margin-right: 10px; /* Space between image and text */
-            vertical-align: middle; /* Align image vertically */
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
         }
-
-        /* Animation Keyframes */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
     </style>
-
-    <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
     <header>
-        <button class="hamburger" onclick="toggleMenu()">&#9776;</button> <!-- Hamburger icon -->
-        <button class="profile-button" onclick="toggleSubmenu()">
-            <img src="https://example.com/profile-pic.jpg" alt="Profile Picture"> <!-- Replace with your profile picture URL -->
+        <button class="hamburger" onclick="toggleMenu()" aria-expanded="false">&#9776;</button>
+        <button class="profile-button" onclick="toggleSubmenu()" aria-expanded="false">
+            <img src="https://example.com/profile-pic.jpg" alt="Profile Picture">
             My Profile
-        </button> <!-- My Profile button -->
+        </button>
         <h1>Welcome to TRIBAL's Portfolio</h1>
         <p>Your gateway to my skills and projects</p>
         <div id="submenu" class="submenu">
@@ -204,7 +197,6 @@
             <button onclick="contactHelpline()">Contact Helpline</button>
         </div>
     </header>
-
     <div id="menu" class="menu">
         <button onclick="showSection('about')">About Me</button>
         <button onclick="showSection('skills')">Skills</button>
@@ -213,14 +205,12 @@
         <button onclick="showSection('general')">General Information</button>
         <button onclick="showSection('contact')">Contact Me</button>
     </div>
-
     <div id="expandable" class="expandable-section">
         <section id="about">
             <h2>About Me</h2>
             <p>Hello! I'm TRIBAL, a passionate web developer with a knack for creating interactive and user-friendly websites. I love coding and continuously learning new technologies.</p>
             <p>In my free time, I enjoy exploring new programming languages, contributing to open-source projects, and staying updated with the latest trends in web development.</p>
         </section>
-
         <section id="skills">
             <h2>Skills</h2>
             <p>I have a diverse skill set that allows me to tackle various challenges in web development:</p>
@@ -233,7 +223,6 @@
                 <li><strong>Version Control:</strong> Familiar with Git and GitHub for collaboration.</li>
             </ul>
         </section>
-
         <section id="projects">
             <h2>Projects</h2>
             <p>Here are some of the projects I've worked on:</p>
@@ -245,7 +234,6 @@
                 <li><strong><a href="https://example.com/weather" target="_blank">Project 5:</a></strong> Weather App - An application that fetches weather data from an API and displays it beautifully.</li>
             </ul>
         </section>
-
         <section id="education">
             <h2>Education</h2>
             <p>Here is my educational background:</p>
@@ -260,7 +248,6 @@
                 </li>
             </ul>
         </section>
-
         <section id="general">
             <h2>General Information</h2>
             <p>This section contains general information about my interests, experiences, and other relevant details that shape who I am as a developer and individual.</p>
@@ -273,80 +260,63 @@
             </ul>
             <p>My goal is to continuously grow as a developer and contribute positively to the tech community.</p>
         </section>
-
         <section id="contact">
             <h2>Contact Me</h2>
             <p>If you would like to get in touch, feel free to reach out via email:</p>
             <p>Email: <a href="mailto:tribal@example.com">tribal@example.com</a></p>
         </section>
     </div>
-
     <footer>
         <p>&copy; 2023 TRIBAL. All rights reserved.</p>
         <div class="social-icons">
             <p>Connect with me on social media:</p>
             <a href="https://www.tiktok.com/@tribal" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://x.com/tribal" target="_blank"><i class="fab fa-x"></i></a> <!-- Updated Twitter to X -->
+            <a href="https://x.com/tribal" target="_blank"><i class="fab fa-x"></i></a>
             <a href="https://www.facebook.com/tribal" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/tribal" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.youtube.com/c/tribal" target="_blank"><i class="fab fa-youtube"></i></a>
             <a href="https://github.com/tribal" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://wa.me/yourwhatsapplink" target="_blank"><i class="fab fa-whatsapp"></i></a> <!-- Added WhatsApp icon -->
-            <a href="https://t.me/yourtelegramlink" target="_blank"><i class="fab fa-telegram"></i></a> <!-- Added Telegram icon -->
+            <a href="https://wa.me/yourwhatsapplink" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://t.me/yourtelegramlink" target="_blank"><i class="fab fa-telegram"></i></a>
         </div>
     </footer>
-
-    <!-- Inline JavaScript -->
     <script>
         function toggleMenu() {
             const menu = document.getElementById('menu');
-            if (menu.style.display === 'none' || menu.style.display === '') {
-                menu.style.display = 'block';
-            } else {
-                menu.style.display = 'none';
-            }
+            const isExpanded = menu.style.display === 'block';
+            menu.style.display = isExpanded ? 'none' : 'block';
+            document.querySelector('.hamburger').setAttribute('aria-expanded', !isExpanded);
         }
-
         function toggleSubmenu() {
             const submenu = document.getElementById('submenu');
-            if (submenu.style.display === 'none' || submenu.style.display === '') {
-                submenu.style.display = 'block';
-            } else {
-                submenu.style.display = 'none';
-            }
+            const isExpanded = submenu.style.display === 'block';
+            submenu.style.display = isExpanded ? 'none' : 'block';
+            document.querySelector('.profile-button').setAttribute('aria-expanded', !isExpanded);
         }
-
         function manageProfilePicture() {
             alert("Feature to add/remove profile picture will be implemented.");
         }
-
         function changeTheme() {
             alert("Feature to change theme will be implemented.");
         }
-
         function createPassword() {
             alert("Feature to create a new password will be implemented.");
         }
-
         function resetPassword() {
             alert("Feature to reset password will be implemented.");
         }
-
         function contactHelpline() {
             alert("For assistance, please contact the helpline at +254782662427.");
         }
-
         function showSection(sectionId) {
             const sections = document.querySelectorAll('section');
             sections.forEach(section => {
-                section.style.display = 'none'; // Hide all sections
+                section.style.display = 'none';
             });
-
             const activeSection = document.getElementById(sectionId);
-            activeSection.style.display = 'block'; // Show the selected section
-            document.getElementById('menu').style.display = 'none'; // Hide the menu after selection
+            activeSection.style.display = 'block';
+            document.getElementById('menu').style.display = 'none';
         }
     </script>
-
 </body>
 </html>
